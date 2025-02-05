@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Locations | The Elects Apostolic Church</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 55px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #dfd3b3;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        .map-container {
+            height: 600px;
+            width: 100%;
+            position: relative;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        .member-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 10px;
+            width: 250px;
+        }
+
+        .member-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .member-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .member-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .leaflet-popup-content-wrapper {
+            border-radius: 10px;
+            padding: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #ff9800;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="../index.html"><img src="../Logo2.png" alt="The Elects Apostolic Church"></a>
+        <nav>
+            <a href="history.html">History</a>
+            <a href="aim.html">Aim</a>
+            <a href="services.html">Services</a>
+            <a href="locations.html">Branches</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+    </header>
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4 style="text-align: left;">About Us</h4>
+                <ul style="text-align: left;">
+                    <li><a href="aim.html">Our Mission</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="locations.html">Our Locations</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Contact Us</h4>
+                <ul style="text-align: left;">
+                    <li>255 WF Nkomo Street</li>
+                    <li>Pretoria West</li>
+                    <li>0183</li>
+                    <li>Email: <a href="mailto:Izifundo01@yahoo.com">Izifundo01@yahoo.com</a></li>
+                    <li><a href="contact.html">Contact Form</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Media</h4>
+                <ul style="text-align: left;">
+                    <li><a href="podcasts.html">Podcast</a></li>
+                    <li><a href="podcasts.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Follow Us</h4>
+                <ul style="text-align: left;">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="color: white;">&copy; 2024 The Elects Apostolic Church. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([-28.4793, 24.6727], 6); // Centered on South Africa
+
+        // Add a tile layer (map background)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Branch locations with member details
+        const branches = [
+            {
+                coords: [-25.712944, 28.378472], // Pretoria
+                members: [
+                    {
+                        name: "John Doe",
+                        photo: "member1.jpg",
+                        phone: "+27 12 345 6789",
+                        email: "john.doe@example.com"
+                    },
+                    {
+                        name: "Jane Smith",
+                        photo: "member2.jpg",
+                        phone: "+27 12 345 6789",
+                        email: "jane.smith@example.com"
+                    }
+                ]
+            },
+            {
+                coords: [-26.2041, 28.0473], // Johannesburg
+                members: [
+                    {
+                        name: "Alice Johnson",
+                        photo: "member3.jpg",
+                        phone: "+27 11 234 5678",
+                        email: "alice.j@example.com"
+                    },
+                    {
+                        name: "Bob Brown",
+                        photo: "member4.jpg",
+                        phone: "+27 11 234 5678",
+                        email: "bob.b@example.com"
+                    }
+                ]
+            },
+            {
+                coords: [-33.9249, 18.4241], // Cape Town
+                members: [
+                    {
+                        name: "Charlie Davis",
+                        photo: "member5.jpg",
+                        phone: "+27 21 123 4567",
+                        email: "charlie.d@example.com"
+                    },
+                    {
+                        name: "Diana Evans",
+                        photo: "member6.jpg",
+                        phone: "+27 21 123 4567",
+                        email: "diana.e@example.com"
+                    }
+                ]
+            }
+        ];
+
+        // Add markers for each branch
+        branches.forEach(branch => {
+            const marker = L.marker(branch.coords).addTo(map);
+
+            // Create member cards for the popup
+            const popupContent = branch.members.map(member => `
+                <div class="member-card">
+                    <img src="${member.photo}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>📞 ${member.phone}</p>
+                    <p>✉️ ${member.email}</p>
+                </div>
+            `).join('');
+
+            // Bind popup to the marker
+            marker.bindPopup(popupContent, { maxWidth: 300 });
+        });
+    </script>
+</body>
+</html>

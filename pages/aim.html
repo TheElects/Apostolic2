@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aims - The Elects Apostolic Church</title>
+    <style>
+        /* Basic page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('../spikes.png'); /* Pattern background */
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-position: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 55px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #dfd3b3;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .aim-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            /* justify-content: space-between; */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-grid div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #ff9800;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        .aim-text {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            footer .footer-grid {
+                grid-template-columns: 1fr; /* Stack columns on smaller screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../index.html"><img src="../Logo2.png" alt="The Elects Apostolic Church"></a>
+    <nav>
+        <a href="history.html">History</a>
+        <a href="aim.html">Aim</a>
+        <a href="services.html">Services</a>
+        <a href="locations.html">Branches</a>
+        <a href="podcasts.html">Podcasts</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h1>Below are the aims of TEAC</h1>
+    
+    <div class="aim-card left" style="animation-delay: 0s;">
+        <p>1. Empowerment and Restoration of Spiritual Identity</p>
+        <p class="aim-text">To empower individuals to recognize and embrace their inherent spiritual divinity, fostering a community where members feel confident in their personal spiritual journeys.</p>
+    </div>
+    
+    <div class="aim-card right" style="animation-delay: 0.5s;">
+        <p>2. Connection to the Self</p>
+        <p class="aim-text">To facilitate profound connections between individuals and their celestial guardians, ensuring that each member feels supported and guided on their spiritual path.</p>
+    </div>
+    
+    <div class="aim-card left" style="animation-delay: 1s;">
+        <p>3. A Hub of Spiritual Knowledge</p>
+        <p class="aim-text">To establish TEAC as a leading center for learning and understanding African spirituality, where teachings are shared and preserved for future generations.</p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4 style="text-align: left;">About Us</h4>
+            <ul style="text-align: left;">
+                <li><a href="aim.html">Our Mission</a></li>
+                <li><a href="history.html">Our History</a></li>
+		<li><a href="locations.html">Our Locations</a></li>
+		<li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="text-align: left;">Contact Us</h4>
+	    <ul style="text-align: left;">
+            	<li style="text-align: left;">255 WF Nkomo Street</li>
+		<li style="text-align: left;">Pretoria West</li>
+		<li style="text-align: left;">0183</li>
+		<p style="text-align: left;">Email: Izifundo01yahoo.com</p>
+                <li style="text-align: left;"><a href="pages/contact.html">Contact Form</a></li>
+            </ul>
+        </div>
+
+	<div>
+	    <h4 style="text-align: left;">Media</h4>
+	    <ul style="text-align: left;">
+            	<li><a href="pages/podcasts.html">Podcast</a></li>
+		<li><a href="pages/podcasts.html">Blogs</a></li>
+            </ul>
+	</div>
+
+
+        <div>
+            <h4 style="text-align: left;">Follow Us</h4>
+            <ul style="text-align: left;">
+                <li style="text-align: left;"><a href="#">Facebook</a></li>
+                <li style="text-align: left;"><a href="#">Instagram</a></li>
+                <li style="text-align: left;"><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 The Elects Apostolic Church. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

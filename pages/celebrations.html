@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Celebrations | The Elects Apostolic Church</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FF6B35, #FFD93D);
+            color: #2D3047;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+	    background-position: center; /* Center the pattern */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        nav {
+            display: flex;
+            gap: 55px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #dfd3b3;
+        }
+
+        .celebration-hero {
+            padding: 60px 20px;
+            text-align: center;
+            /* background: rgba(255, 255, 255, 0.2); */
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .event-details {
+            padding: 25px;
+        }
+
+        .event-date {
+            color: #FF6B35;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .event-location {
+            color: #2D3047;
+            margin: 15px 0;
+        }
+
+        .event-location a {
+            color: #FF6B35;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .event-location a:hover {
+            text-decoration: underline;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            /* justify-content: space-between; */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-grid div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #ff9800;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* All other footer styles remain identical */
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../Logo2.png" alt="The Elects Apostolic Church"></a>
+        <nav>
+            <a href="history.html">History</a>
+            <a href="aim.html">Aim</a>
+            <a href="services.html">Services</a>
+            <a href="locations.html">Branches</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+    </header>
+
+    <div class="celebration-hero">
+        <h1>Annual Celebrations</h1>
+        <p>Moments of communal connection and spiritual elevation</p>
+    </div>
+
+    <div class="events-grid">
+        <div class="event-card">
+            <div class="event-image" style="background-image: url('celebration.jpg')"></div>
+            <div class="event-details">
+                <h2>Day of Remembrance</h2>
+                <div class="event-date">07 & 08 June 2025</div>
+                <div class="event-location">
+                    📍 <a href="https://www.google.com/maps?q=-25.712944,28.378472" target="_blank">Main Hall</a>
+                </div>
+                <p>An evening to honor our journey and celebrate ancestral connections through sacred rituals and shared stories.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-image" style="background-image: url('celebration2.jpg')"></div>
+            <div class="event-details">
+                <h2>Thanksgiving Ceremony</h2>
+                <div class="event-date">07 December 2025</div>
+                <div class="event-location">
+                    📍 <a href="https://www.google.com/maps?q=-25.712944,28.378472" target="_blank">Main Hall</a>
+                </div>
+                <p>A vibrant day of gratitude featuring celestial music, communal feasting, and spiritual renewal ceremonies.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-gallery">
+        <div class="gallery-item">
+            <img src="event1-1.jpg" alt="Celebration Moment 1">
+        </div>
+        <div class="gallery-item">
+            <img src="event1-2.jpg" alt="Celebration Moment 2">
+        </div>
+        <div class="gallery-item">
+            <img src="event2-1.jpg" alt="Celebration Moment 3">
+        </div>
+        <div class="gallery-item">
+            <img src="event2-2.jpg" alt="Celebration Moment 4">
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4 style="text-align: left;">About Us</h4>
+            <ul style="text-align: left;">
+                <li><a href="aim.html">Our Mission</a></li>
+                <li><a href="history.html">Our History</a></li>
+		<li><a href="locations.html">Our Locations</a></li>
+		<li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="text-align: left;">Contact Us</h4>
+	    <ul style="text-align: left;">
+            	<li style="text-align: left;">255 WF Nkomo Street</li>
+		<li style="text-align: left;">Pretoria West</li>
+		<li style="text-align: left;">0183</li>
+		<p style="text-align: left;">Email: Izifundo01yahoo.com</p>
+                <li style="text-align: left;"><a href="pages/contact.html">Contact Form</a></li>
+            </ul>
+        </div>
+
+	<div>
+	    <h4 style="text-align: left;">Media</h4>
+	    <ul style="text-align: left;">
+            	<li><a href="pages/podcasts.html">Podcast</a></li>
+		<li><a href="pages/podcasts.html">Blogs</a></li>
+            </ul>
+	</div>
+
+
+        <div>
+            <h4 style="text-align: left;">Follow Us</h4>
+            <ul style="text-align: left;">
+                <li style="text-align: left;"><a href="#">Facebook</a></li>
+                <li style="text-align: left;"><a href="#">Instagram</a></li>
+                <li style="text-align: left;"><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 The Elects Apostolic Church. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

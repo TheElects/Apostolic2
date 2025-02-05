@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | The Elects Apostolic Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-XZizKHgF/XDA75G8pKoIKQyWcd7zw0DByDLd5Z3xlIgS7hFz1MZitN4H7Kh5rbS8r6fB/UPsqAFl3gM3EKGVYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5dc /* #D3B69C */;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-image: url('../so-white.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 55px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #dfd3b3;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        .services-hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a237e, #4a148c);
+            color: white;
+        }
+
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+
+        .service-card h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #ff9800;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="../index.html"><img src="../Logo2.png" alt="The Elects Apostolic Church"></a>
+        <nav>
+            <a href="history.html">History</a>
+            <a href="aim.html">Aim</a>
+            <a href="services.html">Services</a>
+            <a href="locations.html">Branches</a>
+            <a href="podcasts.html">Podcasts</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="services-hero">
+        <h1>Our Promise</h1>
+        <p>At TEAC, we function with two foundational truths: <i>all that you seek is within</i>, and <i>all that exists is of spiritual origin</i>. With these principles at our core, we offer guidance and support to foster your journey of self-discovery and spiritual growth.</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-star"></i></div>
+            <h2>Illuminate Your Gifts</h2>
+            <p>Discover the unique gifts bestowed upon you by your angels and celestial guides.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-heart"></i></div>
+            <h2>Heal & Reconcile</h2>
+            <p>Strengthen your connection with your angels through healing and reconciliation.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-dove"></i></div>
+            <h2>Understand Communication</h2>
+            <p>Learn how your angels communicate with you and interpret their messages.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-comments"></i></div>
+            <h2>Meaningful Conversations</h2>
+            <p>Equip yourself with the knowledge to converse meaningfully with your angels.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-water"></i></div>
+            <h2>Spiritual Cleansing</h2>
+            <p>Experience renewal and upliftment through spiritual cleansing rituals.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-seedling"></i></div>
+            <h2>Nurture Self-Awareness</h2>
+            <p>Embark on a transformative journey to inner understanding and purpose.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4 style="text-align: left;">About Us</h4>
+                <ul style="text-align: left;">
+                    <li><a href="aim.html">Our Mission</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="locations.html">Our Locations</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Contact Us</h4>
+                <ul style="text-align: left;">
+                    <li>255 WF Nkomo Street</li>
+                    <li>Pretoria West</li>
+                    <li>0183</li>
+                    <li>Email: <a href="mailto:Izifundo01@yahoo.com">Izifundo01@yahoo.com</a></li>
+                    <li><a href="contact.html">Contact Form</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Media</h4>
+                <ul style="text-align: left;">
+                    <li><a href="podcasts.html">Podcast</a></li>
+                    <li><a href="podcasts.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="text-align: left;">Follow Us</h4>
+                <ul style="text-align: left;">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="color: white;">&copy; 2024 The Elects Apostolic Church. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
